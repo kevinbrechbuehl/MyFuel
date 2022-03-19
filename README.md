@@ -6,8 +6,8 @@ The app is designed with the mobile first approach, as it is mostly used on mobi
 
 ## Usage
 
-My Fuel runs on https://myfuel.ctor.io and is hosted by Netlify (thanks!). If you would like to get your own login, feel free to [contact me](https://www.aquasonic.ch). If you just want to play around a bit, you could use the test user id `252455108115169810` (keep in mind that the demo user data will be visible to anyone).
+My Fuel runs on https://myfuel.ctor.io and is hosted by Netlify (thanks!). If you would like to get your own login, feel free to [contact me](https://kevinbrechbuehl.com). If you just want to play around a bit, you could use the test user id `252455108115169810` (keep in mind that the demo user data will be visible to anyone).
 
 ## License
 
-MIT License (MIT) &copy; [Kevin Brechbühl](https://github.com/aquasonic)
+MIT License (MIT) &copy; [Kevin Brechbühl](https://github.com/kevinbrechbuehl)
