@@ -2,7 +2,9 @@
   "name": "@my-fuel/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "nx g @nx-dotnet/core:restore"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~18.2.0",
@@ -24,6 +26,7 @@
     "@angular/compiler-cli": "~18.2.0",
     "@angular/language-service": "~18.2.0",
     "@eslint/js": "^9.8.0",
+    "@nx-dotnet/core": "^2.4.5",
     "@nx/angular": "20.0.2",
     "@nx/eslint": "20.0.2",
     "@nx/eslint-plugin": "20.0.2",

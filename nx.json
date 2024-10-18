@@ -42,5 +42,6 @@
         }
       }
     }
-  }
+  },
+  "plugins": ["@nx-dotnet/core"]
 }
