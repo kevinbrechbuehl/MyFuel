@@ -6,3 +6,4 @@
 .angular
 /apps/backend
 /libs/backend
+/libs/frontend/api/src/lib/generated

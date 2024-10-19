@@ -41,7 +41,24 @@
           "codeCoverage": true
         }
       }
+    },
+    "@nx-dotnet/core:update-swagger": {
+      "cache": true
     }
   },
-  "plugins": ["@nx-dotnet/core"]
+  "plugins": ["@nx-dotnet/core"],
+  "generators": {
+    "@nx/angular:application": {
+      "linter": "eslint",
+      "style": "css",
+      "unitTestRunner": "jest"
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nx/angular:component": {
+      "style": "css"
+    }
+  }
 }

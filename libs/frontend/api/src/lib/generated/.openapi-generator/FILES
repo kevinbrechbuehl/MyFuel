@@ -1,0 +1,10 @@
+README.md
+api.module.ts
+api/api.ts
+api/home-api.service.ts
+configuration.ts
+encoder.ts
+index.ts
+model/models.ts
+param.ts
+variables.ts

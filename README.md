@@ -10,6 +10,7 @@ Be sure to have the following prerequisites installed:
 
 - [Node.js LTS](https://nodejs.org/)
 - [.NET 8 SDK](https://dotnet.microsoft.com/)
+- [Docker](https://www.docker.com/)
 
 Run the following command in the repository root to install dependencies:
 
@@ -23,4 +24,12 @@ Run the following command to start both the frontend and the backend:
 
 ```sh
 npx nx run-many -t serve -p frontend backend
+```
+
+### Generate Api Proxies
+
+To regenerate TypeScript api proxies, run the following command:
+
+```sh
+npx nx generate-api frontend
 ```

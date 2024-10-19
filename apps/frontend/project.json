@@ -80,6 +80,22 @@
         "staticFilePath": "dist/apps/frontend/browser",
         "spa": true
       }
+    },
+    "generate-api": {
+      "executor": "nx:run-commands",
+      "options": {
+        "parallel": false,
+        "commands": [
+          "rimraf -g \"libs/frontend/api/src/lib/generated/*\" \"libs/frontend/api/src/lib/generated/.openapi-generator\" \"!libs/frontend/api/src/lib/generated/.openapi-generator-ignore\"",
+          "docker run --rm -v .:/local openapitools/openapi-generator-cli generate -i /local/apps/backend/api.json -g typescript-angular -o /local/libs/frontend/api/src/lib/generated --additional-properties=serviceSuffix=ApiService,serviceFileSuffix=-api.service,fileNaming=kebab-case"
+        ]
+      },
+      "dependsOn": [
+        {
+          "target": "generate-swagger",
+          "projects": "backend"
+        }
+      ]
     }
   }
 }

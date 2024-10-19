@@ -36,6 +36,15 @@
     },
     "lint": {
       "executor": "@nx-dotnet/core:format"
+    },
+    "generate-swagger": {
+      "executor": "@nx-dotnet/core:update-swagger",
+      "options": {
+        "output": "apps/backend/api.json"
+      },
+      "dependsOn": [
+        "build"
+      ]
     }
   }
 }
