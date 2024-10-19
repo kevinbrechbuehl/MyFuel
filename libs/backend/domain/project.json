@@ -1,0 +1,30 @@
+{
+  "name": "dotnet-domain",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/backend/domain",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx-dotnet/core:build",
+      "outputs": [
+        "{workspaceRoot}/dist/libs/backend/domain",
+        "{workspaceRoot}/dist/intermediates/libs/backend/domain",
+        "{projectRoot}/bin",
+        "{projectRoot}/obj"
+      ],
+      "options": {
+        "configuration": "Debug",
+        "noDependencies": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx-dotnet/core:format"
+    }
+  }
+}
