@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFuel.WebHost", "apps\backend\MyFuel.WebHost.csproj", "{39425F41-9CA7-4FFA-833D-BF783A18B82D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFuel.Presentation", "libs\backend\presentation\MyFuel.Presentation.csproj", "{CAD032CA-D782-4787-9FA8-1CD1E64D6477}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{39425F41-9CA7-4FFA-833D-BF783A18B82D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39425F41-9CA7-4FFA-833D-BF783A18B82D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39425F41-9CA7-4FFA-833D-BF783A18B82D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAD032CA-D782-4787-9FA8-1CD1E64D6477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD032CA-D782-4787-9FA8-1CD1E64D6477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD032CA-D782-4787-9FA8-1CD1E64D6477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD032CA-D782-4787-9FA8-1CD1E64D6477}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

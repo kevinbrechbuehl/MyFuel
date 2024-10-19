@@ -1,3 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-  
+  <ItemGroup>
+    <ProjectReference Include="..\..\libs\backend\presentation\MyFuel.Presentation.csproj"/>
+  </ItemGroup>
 </Project>

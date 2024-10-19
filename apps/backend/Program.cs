@@ -1,6 +1,19 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using Microsoft.AspNetCore.Builder;
+using MyFuel.Presentation;
 
-app.MapGet("/", () => "Hello World!");
+namespace MyFuel.WebHost
+{
+  public class Program
+  {
+    public static void Main(string[] args)
+    {
+      var builder = WebApplication.CreateBuilder(args);
+      builder.Services.AddPresentation();
 
-app.Run();
+      var app = builder.Build();
+      app.UsePresentation();
+
+      app.Run();
+    }
+  }
+}
