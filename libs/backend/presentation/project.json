@@ -2,20 +2,16 @@
   "name": "dotnet-presentation",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "libs/backend/dotnet-presentation",
+  "sourceRoot": "libs/backend/presentation",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@nx-dotnet/core:build",
       "outputs": [
-        "{workspaceRoot}/dist/libs/backend/dotnet-presentation",
-        "{workspaceRoot}/dist/intermediates/libs/backend/dotnet-presentation",
+        "{workspaceRoot}/dist/libs/backend/presentation",
+        "{workspaceRoot}/dist/intermediates/libs/backend/presentation",
         "{projectRoot}/bin",
         "{projectRoot}/obj"
-      ],
-      "cache": true,
-      "dependsOn": [
-        "^build"
       ],
       "options": {
         "configuration": "Debug",
@@ -25,18 +21,10 @@
         "production": {
           "configuration": "Release"
         }
-      },
-      "parallelism": true
+      }
     },
     "lint": {
-      "executor": "@nx-dotnet/core:format",
-      "cache": true,
-      "inputs": [
-        "{projectRoot}/**/*.{cs,fs,vb}"
-      ],
-      "configurations": {},
-      "options": {},
-      "parallelism": true
+      "executor": "@nx-dotnet/core:format"
     }
   }
 }
