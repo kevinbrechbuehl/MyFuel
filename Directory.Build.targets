@@ -1,5 +1,5 @@
-<!-- 
-  This file is imported late in the build order. 
+<!--
+  This file is imported late in the build order.
   Use it to override properties and define dependent properties.
 -->
 <Project>
