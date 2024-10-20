@@ -1,0 +1,27 @@
+{
+  "name": "docker",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tools/docker",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker build -f tools/docker/Dockerfile -t my-fuel dist"
+      },
+      "dependsOn": [
+        {
+          "target": "publish",
+          "projects": ["frontend", "backend"]
+        }
+      ]
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "docker compose -f ./tools/docker/docker-compose.yml up"
+      }
+    }
+  }
+}

@@ -41,9 +41,6 @@
           "codeCoverage": true
         }
       }
-    },
-    "@nx-dotnet/core:update-swagger": {
-      "cache": true
     }
   },
   "plugins": ["@nx-dotnet/core"],

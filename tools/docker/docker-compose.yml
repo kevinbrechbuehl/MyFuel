@@ -1,0 +1,8 @@
+name: my-fuel
+
+services:
+  app:
+    container_name: 'app'
+    image: my-fuel:latest
+    ports:
+      - '5000:8080'

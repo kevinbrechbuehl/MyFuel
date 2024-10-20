@@ -15,13 +15,40 @@
       ],
       "options": {
         "configuration": "Debug",
-        "noDependencies": true
+        "noDependencies": true,
+        "noRestore": true
       },
       "configurations": {
         "production": {
           "configuration": "Release"
         }
-      }
+      },
+      "defaultConfiguration": "production"
+    },
+    "publish": {
+      "executor": "@nx-dotnet/core:publish",
+      "cache": true,
+      "outputs": [
+        "{workspaceRoot}/dist/apps/backend",
+        "{workspaceRoot}/dist/intermediates/apps/backend",
+        "{projectRoot}/bin",
+        "{projectRoot}/obj"
+      ],
+      "options": {
+        "configuration": "Debug",
+        "noBuild": true,
+        "noDependencies": true,
+        "noRestore": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      },
+      "defaultConfiguration": "production",
+      "dependsOn": [
+        "build"
+      ]
     },
     "serve": {
       "executor": "@nx-dotnet/core:serve",
@@ -39,6 +66,7 @@
     },
     "generate-swagger": {
       "executor": "@nx-dotnet/core:update-swagger",
+      "cache": true,
       "options": {
         "output": "apps/backend/api.json"
       },

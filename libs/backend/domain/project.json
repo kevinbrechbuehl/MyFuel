@@ -15,13 +15,15 @@
       ],
       "options": {
         "configuration": "Debug",
-        "noDependencies": true
+        "noDependencies": true,
+        "noRestore": true
       },
       "configurations": {
         "production": {
           "configuration": "Release"
         }
-      }
+      },
+      "defaultConfiguration": "production"
     },
     "lint": {
       "executor": "@nx-dotnet/core:format"
