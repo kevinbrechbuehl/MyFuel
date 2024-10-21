@@ -1,0 +1,40 @@
+name: 'Continuous Integration'
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+# Needed for nx-set-shas when run on the main branch
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      # Setup
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.18'
+          cache: 'npm'
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # Install dependencies
+      - run: npm ci --legacy-peer-deps
+
+      # Calculate base and head SHAs for nx affected
+      - uses: nrwl/nx-set-shas@v4
+
+      # Run nx pipeline
+      - run: npx nx format:check
+      - run: npx nx affected --targets lint test build publish --exclude docker
