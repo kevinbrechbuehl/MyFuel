@@ -48,6 +48,20 @@
       },
       "defaultConfiguration": "production"
     },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx cpx \"dist/apps/frontend/browser/**/*\" \"dist/apps/backend/net8.0/publish/wwwroot/\" --clean"
+      },
+      "defaultConfiguration": "production",
+      "dependsOn": [
+        "build",
+        {
+          "target": "publish",
+          "projects": "backend"
+        }
+      ]
+    },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
       "options": {

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace MyFuel.Presentation
 {
@@ -13,9 +14,20 @@ namespace MyFuel.Presentation
 
         public static void UsePresentation(this WebApplication app)
         {
+            // Security
             app.UseHttpsRedirection();
+            app.UseHsts();
+
+            // Map and register endpoints
             app.MapControllers();
-            app.MapGet("/", () => Results.Redirect("/api"));
+            if (app.Environment.IsDevelopment())
+            {
+                app.MapGet("/", () => Results.Redirect("/api"));
+            }
+
+            // Host Angular application in wwwroot
+            app.UseFileServer();
+            app.MapFallbackToFile("index.html");
         }
     }
 }
