@@ -1,3 +1,5 @@
+using System;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyFuel.Presentation.Controllers
@@ -9,7 +11,8 @@ namespace MyFuel.Presentation.Controllers
         [HttpGet]
         public string Get()
         {
-            return "Hello Api!";
+            var now = DateTime.Now;
+            return $"Hi guest! It's {now:D} at {now:t}.";
         }
     }
 }
