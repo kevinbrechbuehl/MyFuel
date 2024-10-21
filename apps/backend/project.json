@@ -31,6 +31,7 @@
         "{workspaceRoot}/dist/intermediates/apps/backend"
       ],
       "options": {
+        "output": "{workspaceRoot}/dist/publish",
         "configuration": "Debug",
         "noBuild": true,
         "noDependencies": true,

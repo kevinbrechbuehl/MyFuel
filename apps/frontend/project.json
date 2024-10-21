@@ -51,7 +51,7 @@
     "publish": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npx cpx \"dist/apps/frontend/browser/**/*\" \"dist/apps/backend/net8.0/publish/wwwroot/\" --clean"
+        "command": "npx cpx \"dist/apps/frontend/browser/**/*\" \"dist/publish/wwwroot/\" --clean"
       },
       "defaultConfiguration": "production",
       "dependsOn": [
