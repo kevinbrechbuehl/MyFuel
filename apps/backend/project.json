@@ -9,9 +9,7 @@
       "executor": "@nx-dotnet/core:build",
       "outputs": [
         "{workspaceRoot}/dist/apps/backend",
-        "{workspaceRoot}/dist/intermediates/apps/backend",
-        "{projectRoot}/bin",
-        "{projectRoot}/obj"
+        "{workspaceRoot}/dist/intermediates/apps/backend"
       ],
       "options": {
         "configuration": "Debug",
@@ -30,9 +28,7 @@
       "cache": true,
       "outputs": [
         "{workspaceRoot}/dist/apps/backend",
-        "{workspaceRoot}/dist/intermediates/apps/backend",
-        "{projectRoot}/bin",
-        "{projectRoot}/obj"
+        "{workspaceRoot}/dist/intermediates/apps/backend"
       ],
       "options": {
         "configuration": "Debug",
